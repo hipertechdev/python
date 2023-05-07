@@ -9,8 +9,8 @@ import socket
 # FTP credentials
 ftp_address = "192.168.0.20"
 ftp_port = 21
-ftp_username = "aepel"
-ftp_password = "aepel"
+ftp_username = ""
+ftp_password = ""
 
 # Local file paths
 sip_file_path = "/var/www/html/sip.txt"
