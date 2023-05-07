@@ -12,6 +12,19 @@ ftp_port = 21
 ftp_username = ""
 ftp_password = ""
 
+# 업데이트 주기 (초)
+update_interval = 10
+
+# 파일 읽기 함수
+def read_file():
+    with open(file_path, "r") as f:
+        lines = f.readlines()
+        ftp_address = lines[0].strip().split(" = ")[1]
+        ftp_port = int(lines[1].strip().split(" = ")[1])
+        ftp_username = lines[2].strip().split(" = ")[1]
+        ftp_password = lines[3].strip().split(" = ")[1]
+    return ftp_address, ftp_port, ftp_username, ftp_password
+
 # Local file paths
 sip_file_path = "/var/www/html/sip.txt"
 volume_level_path = "/var/www/html/dv.txt"
